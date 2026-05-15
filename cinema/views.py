@@ -47,8 +47,6 @@ class MovieViewSet(viewsets.ModelViewSet):
 
     def get_queryset(self):
         queryset = super().get_queryset()
-        genres = self.request.query_params.get("genres")
-        actors = self.request.query_params.get("actors")
         title = self.request.query_params.get("title")
 
         genres_param = self.request.query_params.get("genres")
